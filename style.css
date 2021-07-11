@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --white: #fff;
+  --grayish-blue: hsl(218, 22%, 67%);
+  --cyan-light: hsl(179, 47%, 52%);
+  --cyan-dark: hsl(168, 53%, 41%);
+
+  --br-size: 4px; /* border radius size */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--light-gray);
+}
+
+h2 {
+  font-weight: 700;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 220px);
+  grid-template-areas: "block-1" "block-2" "block-3";
+  margin: 3rem auto;
+  width: 350px;
+  box-shadow: var(--grayish-blue) 0px 7px 29px 0px;
+}
+
+#block-1, #block-2, #block-3 {
+  padding: .75rem;
+}
+
+#block-1 {
+  grid-area: block-1;
+  background-color: var(--white);
+  border-radius: var(--br-size) var(--br-size) 0 0;
+}
+
+#block-1 > h2 {
+  color: var(--cyan);
+}
+
+#block-1 > h2 + p {
+  color: var(--bright-yellow);
+  width: 260px;
+}
+
+#block-1 > h2 + p + p {
+  color: var(--grayish-blue);
+  width: 320px;
+}
+
+#block-2 {
+  grid-area: block-2;
+  background-color: var(--cyan);
+}
+
+#block-2 > h2, #block-3 > h2 {
+  color: var(--white);
+}
+
+#block-2 > h2 > span {
+  color: var(--light-gray);
+}
+
+#block-2 > p, #block-3 > p {
+  color: var(--light-gray);
+}
+
+#block-3 {
+  grid-area: block-3;
+  background-color: var(--cyan-light);
+  border-radius: 0 0 var(--br-size) var(--br-size);
+}
+
+button {
+  background-color: var(--bright-yellow);
+  color: var(--white);
+  border: 1px solid var(--bright-yellow);
+  border-radius: var(--br-size);
+  padding: 1rem;
+  box-shadow: var(--cyan-dark) 0px 7px 29px 0px;
+  width: 100%;
+}
+
+button:hover {
+  border: 1px solid var(--bright-yellow);
+  color: var(--bright-yellow);
+  background-color: var(--cyan);
+  box-shadow: var(--bright-yellow) 0px 7px 29px 0px;
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    width: 750px;
+    grid-template-columns: repeat(2, 375px);
+    grid-template-rows: repeat(2, 220px);
+    grid-template-areas: "block-1 block-1" "block-2 block-3"
+  }
+
+  p {
+    line-height: 20px;
+  }
+
+  #block-1, #block-2, #block-3 {
+    padding: 2rem;
+  }
+
+  #block-1 > h2 + p + p {
+    width: 550px;
+  }
+
+  #block-2 {
+    border-radius: 0 0 0 var(--br-size);
+  }
+
+  #block-3 {
+    border-radius: 0 0 var(--br-size) 0;
+  }
+
+  #block-3 > p {
+    width: 320px;
+  }
+}
