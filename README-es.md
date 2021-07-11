@@ -32,8 +32,8 @@ Desktop
 ![](./readme-src/desktop.png)
 
 ### Links
-- URL para la solución: [Solution page]()
-- URL para probar el sitio: [Github pages]()
+- URL para la solución: [Solution page](https://www.frontendmentor.io/solutions/html-css-single-price-component-SAHhVOwP_)
+- URL para probar el sitio: [Github pages](https://caresle.github.io/single-price-grid-component/)
 
 ## Mi proceso
 
